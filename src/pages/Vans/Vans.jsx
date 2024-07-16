@@ -8,7 +8,7 @@ export const Vans = () => {
 
   useEffect(() => {
     if (!storageData) {
-      fetch('src/data/data.json')
+      fetch('./src/data/data.json')
         .then(res => res.json())
         .then(data => setVans(data))
     } else {
