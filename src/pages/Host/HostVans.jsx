@@ -22,8 +22,6 @@ export default function HostVans () {
     ))
     : null
 
-  console.log(vansElement)
-
   return (
     <div className='p-[26px]'>
       <h2 className='font-[700] text-[32px]'>Your listed vans</h2>

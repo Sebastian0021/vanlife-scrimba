@@ -4,9 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.type{
+  @apply h-[34px] w-[86px] rounded-[5px] text-[#FFEAD0] font-[600] flex justify-center items-center;
+}
+
 body{
   font-family: "Inter", sans-serif;
 }
+
 .active{
   font-weight: bold;
  text-decoration: underline;

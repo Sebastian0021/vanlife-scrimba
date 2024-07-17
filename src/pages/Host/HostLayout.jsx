@@ -5,10 +5,10 @@ export default function HostLayout () {
   return (
     <>
       <nav className='flex justify-around'>
-        <NavLink to='/host' end>Dashboard</NavLink>
-        <NavLink to='/host/income'>Income</NavLink>
-        <NavLink to='/host/vans'>Vans</NavLink>
-        <NavLink to='/host/reviews'>Reviews</NavLink>
+        <NavLink to='.' end>Dashboard</NavLink>
+        <NavLink to='income'>Income</NavLink>
+        <NavLink to='vans'>Vans</NavLink>
+        <NavLink to='reviews'>Reviews</NavLink>
       </nav>
       <Outlet />
     </>

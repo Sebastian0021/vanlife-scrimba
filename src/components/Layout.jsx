@@ -1,12 +1,12 @@
 import React from 'react'
-import { Nav } from './Nav'
+import { Header } from './Header'
 import { Footer } from './Footer'
 import { Outlet } from 'react-router-dom'
 
 export default function Layout () {
   return (
     <div className='flex flex-col h-[100vh] bg-[#FFF7ED]'>
-      <Nav />
+      <Header />
       <main className='bg-[#FFF7ED]'>
         <Outlet />
       </main>

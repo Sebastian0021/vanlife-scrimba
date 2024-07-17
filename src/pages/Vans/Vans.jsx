@@ -12,7 +12,7 @@ export const Vans = () => {
         <div className='flex justify-between mt-[10px]'>
           <div className='flex flex-col justify-between'>
             <p className='font-[600] text-[20px]'>{van.name}</p>
-            <button className={`h-[34px] w-[86px] rounded-[5px] text-[#FFEAD0] font-[600] mt-[10px] ${van.type}`}>{van.type}</button>
+            <div className={`type ${van.type} mt-[10px]`}>{van.type}</div>
           </div>
           <div className='pl-[5px]'>
             <p className='font-[600] text-[20px]'>${van.price}</p>
