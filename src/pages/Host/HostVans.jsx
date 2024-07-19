@@ -9,7 +9,7 @@ export default function HostVans () {
   const vansElement = userVans.length !== 0
     ? userVans.map(van => (
       <div key={van.id}>
-        <Link to={`/host/vans/${van.id}`}>
+        <Link to={van.id}>
           <div className='h-[102px] w-full bg-white py-[18px] px-[24px] mt-[15px] flex rounded-[6px]'>
             <img src={van.imageUrl} className='h-full mr-[26px] rounded-[5px]' alt='' />
             <div className='flex flex-col justify-center'>

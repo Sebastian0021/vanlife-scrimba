@@ -5,7 +5,14 @@
 @tailwind utilities;
 
 .type{
-  @apply h-[34px] w-[86px] rounded-[5px] text-[#FFEAD0] font-[600] flex justify-center items-center;
+  @apply h-[34px] w-[86px] rounded-[5px] flex justify-center items-center;
+}
+
+.simple,
+.rugged,
+.luxury{
+  font: 600;
+  color: #FFEAD0;
 }
 
 body{

@@ -13,8 +13,6 @@ export default function HostVanDetail () {
     setVan(vanStorage)
   }, [])
 
-  console.log(van)
-
   const vanElement = (
     <div className='flex h-[158px] space-x-[20px] mb-[26px]'>
       <div className='min-h-[100px] min-w-[100px] max-h-[158px] max-w-[158px] my-auto '>

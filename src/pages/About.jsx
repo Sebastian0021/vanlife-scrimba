@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const About = () => {
   return (
-    <main className='bg-[#FFF7ED]'>
+    <div>
       <img className='w-[100%]' src={aboutImg} alt='' />
       <div className='px-[26px] py-[50px]'>
         <h2 className='font-[700] text-[32px] mb-[30px]'>Don’t squeeze in a sedan when you could relax in a van.</h2>
@@ -25,6 +25,6 @@ export const About = () => {
         </div>
       </div>
 
-    </main>
+    </div>
   )
 }

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, json } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { About } from './pages/About'
 import { Home } from './pages/Home'
 import { Vans } from './pages/Vans/Vans'
@@ -10,12 +10,13 @@ import Reviews from './pages/Host/Reviews'
 import HostLayout from './pages/Host/HostLayout'
 import HostVans from './pages/Host/HostVans'
 import HostVanDetail from './pages/Host/HostVanDetail'
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import { getDataFromStorage, saveDataToStorage } from './utils/localStorage'
 import HostVanPricing from './pages/Host/HostVanPricing'
 import HostVanPhotos from './pages/Host/HostVanPhotos'
 import HostVanInfo from './pages/Host/HostVanInfo'
 import jsonData from './data/data.json'
+import NotFound from './pages/NotFound'
 
 export default function App () {
   // const [vans, setVans] = useState(null)
@@ -55,6 +56,7 @@ export default function App () {
             </Route>
             <Route path='reviews' element={<Reviews />} />
           </Route>
+          <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
