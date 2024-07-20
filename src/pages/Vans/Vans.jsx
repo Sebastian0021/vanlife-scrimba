@@ -1,7 +1,15 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { getDataFromStorage } from '../../utils/localStorage'
 export const Vans = () => {
-  const vans = getDataFromStorage('vansArray')
+  const { data, loading, error } = getDataFromStorage('vansFetch')
+
+  if (loading) {
+    return <h1>Loading...</h1>
+  } else if (error) {
+    return <h1>Error: {error.message}</h1>
+  }
+
+  const vans = data?.vans || []
 
   const [serchParam, setSearchParams] = useSearchParams()
 

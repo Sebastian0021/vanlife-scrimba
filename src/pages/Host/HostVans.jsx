@@ -3,8 +3,16 @@ import { getDataFromStorage } from '../../utils/localStorage'
 import { Link } from 'react-router-dom'
 
 export default function HostVans () {
+  const { data, loading, error } = getDataFromStorage('vansFetch')
+
   const hostId = '123'
-  const userVans = getDataFromStorage('vansArray').filter(van => van.hostId === hostId)
+  const userVans = data?.vans.filter(van => van.hostId === hostId) || []
+
+  if (loading) {
+    return <h1>Loading...</h1>
+  } else if (error) {
+    return <h1>Error: {error.message}</h1>
+  }
 
   const vansElement = userVans.length !== 0
     ? userVans.map(van => (

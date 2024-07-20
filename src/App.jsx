@@ -10,32 +10,17 @@ import Reviews from './pages/Host/Reviews'
 import HostLayout from './pages/Host/HostLayout'
 import HostVans from './pages/Host/HostVans'
 import HostVanDetail from './pages/Host/HostVanDetail'
-// import { useState, useEffect } from 'react'
-import { getDataFromStorage, saveDataToStorage } from './utils/localStorage'
+import { saveDataToStorage } from './utils/localStorage'
 import HostVanPricing from './pages/Host/HostVanPricing'
 import HostVanPhotos from './pages/Host/HostVanPhotos'
 import HostVanInfo from './pages/Host/HostVanInfo'
-import jsonData from './data/data.json'
+// import jsonData from './data/data.json'
 import NotFound from './pages/NotFound'
+import useFetch from './useFetch'
 
 export default function App () {
-  // const [vans, setVans] = useState(null)
-
-  // const storageData = getDataFromStorage('vansArray')
-
-  // useEffect(() => {
-  //   if (!storageData) {
-  //     fetch('/api/vans')
-  //       .then(res => res.json())
-  //       .then(data => setVans(data))
-  //       .finally(() => {
-  //         if (vans.vans.length !== 0) saveDataToStorage('vansArray', vans.vans)
-  //       })
-  //   } else {
-  //     setVans(storageData)
-  //   }
-  // }, [])
-  saveDataToStorage('vansArray', jsonData)
+  const response = useFetch('/api/vans')
+  saveDataToStorage('vansFetch', response)
 
   return (
     <BrowserRouter>

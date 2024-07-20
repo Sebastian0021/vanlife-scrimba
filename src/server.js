@@ -3,10 +3,9 @@
 /* eslint-disable quotes */
 import { createServer, Model } from "miragejs"
 
-
 createServer({
     models: {
-        vans: Model,
+        vans: Model
     },
 
     seeds(server) {

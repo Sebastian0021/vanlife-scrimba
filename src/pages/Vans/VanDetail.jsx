@@ -4,9 +4,15 @@ import { getDataFromStorage } from '../../utils/localStorage'
 export default function VanDetail () {
   const params = useParams()
 
-  const vans = getDataFromStorage('vansArray')
+  const { data, loading, error } = getDataFromStorage('vansFetch')
 
-  const van = vans ? vans.filter(van => van.id === params.id)[0] : undefined
+  if (loading) {
+    return <h1>Loading...</h1>
+  } else if (error) {
+    return <h1>Error: {error.message}</h1>
+  }
+
+  const van = data?.vans.filter(van => van.id === params.id)[0] || undefined
 
   const vanElement = van
     ? (
